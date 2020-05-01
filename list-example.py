@@ -18,8 +18,11 @@ my_list.append("12333")
 my_list.append(True)
 my_list.append(3.14)
 my_list.append('c')
+my_list.append([1, 2, 3])
 
 print(my_list)
+print("Index 3. ->", my_list[3])
+print("Last element ->", my_list[-1])
 
 # for i in my_list:
 #     print(i, end=" ")
