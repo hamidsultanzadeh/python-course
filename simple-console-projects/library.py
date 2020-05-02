@@ -9,17 +9,18 @@ menu = """
 """
 
 
-def add_book(nm):
-    book_list.append(nm)
+def add_book(book:tuple):
+    book_list.append(book)
 
 
-def remove_book(nm):
-    pass
+def remove_book(book:tuple):
+    if book in book_list:
+        book_list.remove(book)
 
 
-def search_book(nm):
-    if nm in book_list:
-        return book_list.index(nm)
+def search_book(book:tuple):
+    if book in book_list:
+        return book_list.index(book)
     return -1
 
 
@@ -33,22 +34,23 @@ while True:
     choice = input("Select : ")
 
     if choice == "1":
-        name = input("Type name : ")
-        add_book(name)
+        name_book = input("Type name book: ")
+        name_author = input("Type name author: ")
+        add_book((name_book,name_author))
     elif choice == "2":
-        print('coming')
+        name_book = input("Type name book: ")
+        name_author = input("Type name author: ")
+        remove_book((name_book,name_author))
     elif choice == "3":
         show_books()
     elif choice == "4":
-        name = input("Type name : ")
-        result = search_book(name) + 1
+        name_book = input("Type name book: ")
+        name_author = input("Type name author: ")
+        result = search_book((name_book,name_author)) + 1
         print("Index of book :", result if result != 0 else "Does not exist")
     elif choice == "Q" or choice == "q":
         print("Shutting down...")
         quit()
     else:
         print("Wrong operation. Try again")
-
-
-
 
