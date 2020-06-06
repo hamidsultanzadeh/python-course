@@ -1,11 +1,22 @@
-f = open("dictionary.txt","r")
+def main():
+    f = open("dictionary.txt", "r")
 
-arr = f.readlines()
+    arr = f.readlines()
 
-f.close()
+    f.close()
 
-arr.sort()
+    f = open("dictionary.txt", "w+")
 
-for pair in arr:
-    if pair != "\n":
-        print(pair[:len(pair)-1])
+    arr.sort()
+
+    for pair in arr:
+        f.write(pair)
+        if pair[len(pair) - 1] != "\n":
+            f.write("\n")
+            print(pair)
+        else:
+            print(pair[:len(pair) - 1])
+
+
+if __name__ == "__main__":
+    main()

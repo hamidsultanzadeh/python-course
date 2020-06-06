@@ -1,10 +1,10 @@
-noun - isim
-pronoun - əvəzlik
 adjective - sifət
 cheap - ucuz
-noisy - səsli
-flat - mənzil
 dry - quru
-wet - yaş (nəm)
+flat - mənzil
 nervous - əsəbi
+noisy - səsli
+noun - isim
+pronoun - əvəzlik
 shy - utancaq
+wet - yaş (nəm)
